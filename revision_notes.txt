@@ -1,0 +1,25 @@
+@ No html element should be written without any class
+@ don't redefine styles of elements, incline towards changing styles of classes
+    e.g `a { text-decoration: none; }`
+        is worse than
+    `.link { text-decoration: none; }`
+
+@ pixel perfect add-on to check your html-ing
+
+@ use hover on link block, not as a modificator of a random element/block
+@ same goes for gray-text
+@ modificator naming drill: <elementName>_<modificationName>
+
+@ currencies - same elements with different elements
+
+@ some sections - should be navs or divs
+
+@ use component(block) widget
+
+@ info-cards
+
+@ icons to be loaded via inline-svg using svg-store
+
+@ inline styles are forbidden
+
+@ `!important` is not to be used
