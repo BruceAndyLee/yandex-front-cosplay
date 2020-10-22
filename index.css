@@ -12,16 +12,15 @@ body {
 .link {
     color: rgb(0, 119, 255);
 }
-.link_black {
+.link._black {
     color: black;
 }
-.link_orange {
+.link._orange {
     color: orange;
 }
-.link_gray {
+.link._gray {
     color: gray;
 }
-
 .link:hover {
     transition: color 0.3s ease-in-out;
     color: rgb(190, 1, 1);
@@ -73,7 +72,7 @@ body {
     margin-top: 0.7rem;
 }
 
-a.news__preview {
+.news__preview {
     font-size: 1rem;
 }
 
@@ -109,11 +108,11 @@ a.news__preview {
     display: flex;}
 .currencies__item + .currencies__item {
     margin-left: 1rem;}
-.currencies__item_name {
+.currencies__item._name {
     font-weight: bold;}
-.currencies__item_number {
+.currencies__item._number {
 }
-.currencies__item_dynamics {
+.currencies__item._dynamics {
     font-weight: 300;
     color: dimgray;
 }
