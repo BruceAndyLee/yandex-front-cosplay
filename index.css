@@ -7,7 +7,7 @@
 }
 
 body {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .link {
@@ -22,7 +22,7 @@ body {
 .link._gray {
     color: gray;
 }
-.link_small {
+.link._small {
     font-size: 0.7rem;
 }
 
@@ -32,8 +32,16 @@ body {
     cursor: pointer;
 }
 
+.sample-text {
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .content {
-    padding-left: 16%;
 }
 
 .header {
@@ -62,6 +70,10 @@ body {
     width: 50%;
 }
 
+.news {
+    width: 100%;
+}
+
 .news__nav {
     display: flex;
     flex-direction: row;
@@ -78,7 +90,7 @@ body {
 
 .news__datetime {
     color: lightslategray;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     margin-top: 0.75rem;
 }
 
@@ -172,10 +184,10 @@ body {
     align-items: center;
 }
 .search::before {
-    content: 'Yasss!';
+    content: 'Яндекс';
     font-size: 2.5rem;
     position: absolute;
-    transform: translateX(-120px);
+    transform: translateX(-140px);
 }
 .search-box__input {
     line-height: 1.5rem;
@@ -205,14 +217,14 @@ body {
 
 .content__urban {
     margin-top: 1rem;
-    width: 75%;
+    width: 60%;
 }
 .urban {
     position: relative;
     width: 100%;
     border: solid 1px red;
     display: flex;
-    justify-content: stretch;
+    /*justify-content: stretch;*/
     height: 100px;
 }
 .urban__plaque {
