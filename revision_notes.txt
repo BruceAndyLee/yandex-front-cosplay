@@ -23,3 +23,17 @@
 @ inline styles are forbidden
 
 @ `!important` is not to be used
+
+
+@ FIX ALL MODIFICATORS NAME
+@ _black is better than link_black; in css: link._black
+
+@ no text should be left without a span
+
+@ header has two blocks for left and right alignment
+
+@ a-news --> article
+
+@ plaque: has a header and a main and all three of them are different
+
+@ use `display: block;` in ::before pseudo-element

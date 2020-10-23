@@ -7,22 +7,22 @@
 }
 
 body {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .link {
     color: rgb(0, 119, 255);
 }
-.link_black {
+.link._black {
     color: black;
 }
-.link_orange {
+.link._orange {
     color: orange;
 }
-.link_gray {
+.link._gray {
     color: gray;
 }
-.link_small {
+.link._small {
     font-size: 0.7rem;
 }
 
@@ -32,8 +32,16 @@ body {
     cursor: pointer;
 }
 
+.sample-text {
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .content {
-    margin-left: 16%;
 }
 
 .header {
@@ -63,6 +71,10 @@ body {
     border: solid 1px black;
 }
 
+.news {
+    width: 100%;
+}
+
 .news__nav {
     display: flex;
     flex-direction: row;
@@ -79,11 +91,11 @@ body {
 
 .news__datetime {
     color: lightslategray;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     margin-top: 0.75rem;
 }
 
-a.news__preview {
+.news__preview {
     font-size: 1rem;
     position: relative;
 }
@@ -124,12 +136,12 @@ a.news__preview {
     display: flex;}
 .currencies__item + .currencies__item {
     margin-left: 0.4rem;}
-.currencies__item_name {
+.currencies__item._name {
     /* font-weight: bold; */
 }
-.currencies__item_number {
+.currencies__item._number {
 }
-.currencies__item_dynamics {
+.currencies__item._dynamics {
     font-weight: 300;
     color: dimgray;
 }
@@ -173,10 +185,10 @@ a.news__preview {
     align-items: center;
 }
 .search::before {
-    content: 'Yasss!';
+    content: 'Яндекс';
     font-size: 2.5rem;
     position: absolute;
-    transform: translateX(-120px);
+    transform: translateX(-140px);
 }
 .search-box__input {
     line-height: 1.5rem;
@@ -206,14 +218,14 @@ a.news__preview {
 
 .content__urban {
     margin-top: 1rem;
-    width: 75%;
+    width: 60%;
 }
 .urban {
     position: relative;
     width: 100%;
     border: solid 1px red;
     display: flex;
-    justify-content: stretch;
+    /*justify-content: stretch;*/
     height: 100px;
 }
 .urban__plaque {
