@@ -13,8 +13,8 @@ let path = {
     src: {
         html: [source_folder + "/*.html", "!_" + source_folder + "/*.html"],
         css: source_folder + "/less/styles.less",
-        js: source_folder + "/js/script.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico}",
+        js: source_folder + "/js/script.js",
         fonts: source_folder + "/fonts/*.ttf",
     },
     watch: {
@@ -32,6 +32,8 @@ let { src, dest } = require('gulp'),
     fileinclude = require("gulp-file-include"),
     del = require("del"),
     scss = require("gulp-sass"),
+    concat = require("gulp-concat"),
+    less = require("gulp-less"),
     autoprefixer = require("gulp-autoprefixer"),
     mediagroupper = require("gulp-group-css-media-queries"),
     csscleaner = require("gulp-clean-css"),
@@ -56,11 +58,8 @@ function htmlWatcher() {
 
 function cssWatcher() {
     return src(path.src.css)
-        .pipe(
-            scss({
-                outputStyle: "expanded"
-            })
-        )
+        .pipe(less())
+        .pipe(concat('styles.css'))
         .pipe(mediagroupper())
         .pipe(
             autoprefixer({
@@ -72,7 +71,7 @@ function cssWatcher() {
         .pipe(csscleaner())
         .pipe(
             rename({
-                extname: ".min.css"
+                suffix: ".min"
             })
         )
         .pipe(dest(path.build.css))
