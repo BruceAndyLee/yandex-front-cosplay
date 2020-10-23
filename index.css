@@ -33,7 +33,7 @@ body {
 }
 
 .content {
-    padding-left: 16%;
+    margin-left: 16%;
 }
 
 .header {
@@ -59,7 +59,8 @@ body {
 .content__news {
     position: relative;
     margin-top: 1rem;
-    width: 50%;
+    width: 49%;
+    border: solid 1px black;
 }
 
 .news__nav {
