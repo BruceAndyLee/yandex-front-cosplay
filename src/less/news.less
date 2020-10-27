@@ -1,28 +1,35 @@
 .news {
-    width: 100%;
-  }
+
   
-  .news__nav {
+  &__nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    flex-wrap: nowrap;
   }
-  
-  .news__nav-item {
-    font-size: 1.1rem;
+    
+  &__nav-item {
+    flex: 0 0 auto;  
   }
-  
-  .news__nav-item + .news__nav-item {
-    margin-left: 1rem;
+
+  &__nav-item {
+    font-size: 1.2rem;
+    font-weight: 550;
   }
-  
-  .news__datetime {
+
+  &__nav-item + &__nav-item {
+    padding-left: 1rem;
+  }
+    
+  &__datetime {
     color: lightslategray;
     font-size: 0.8rem;
-    margin-top: 0.75rem;
+    margin-left: 1rem;
   }
-  
-  .news__preview {
-    font-size: 1rem;
+    
+  &__preview {
+    font-size: 0.5rem;
     position: relative;
   }
+
+}

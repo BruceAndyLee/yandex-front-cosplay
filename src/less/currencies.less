@@ -1,13 +1,15 @@
 .currencies {
-    display: flex;}
-  .currencies__item + .currencies__item {
+  display: flex;
+
+  &__item + &__item {
     margin-left: 0.4rem;}
-  .currencies__item._name {
+  &__item._name {
     /* font-weight: bold; */
   }
-  .currencies__item._number {
+  &__item._number {
   }
-  .currencies__item._dynamics {
+  &__item._dynamics {
     font-weight: 300;
     color: dimgray;
   }
+}

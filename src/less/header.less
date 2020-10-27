@@ -1,19 +1,27 @@
 .header {
-    position: relative;
-    left: 2%;
-    width: 87%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 1.3rem;
-    align-content: end;
-  }
+  width: 80%;
+  margin-top: 1.4rem;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;  
+  align-items: flex-end;
+  justify-content: space-between;
   
-  .header__spanned {
-    width: 75%;
+  &__left {
     display: flex;
-    justify-content: end;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
-  
-  .header__item {
+
+  &__right {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+    
+  &__item {
     margin: 0 0.5rem;
   }
+
+}

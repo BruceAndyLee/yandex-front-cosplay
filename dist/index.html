@@ -8,77 +8,103 @@
 </head>
 <body>
 <header class="main-header header">
-    <div class="header__item">
-        <a class="link _black">
-            <i class="fas fa-location-arrow link__icon"></i>
-            <span class="link__description">Долгопрудный</span>
-        </a>
-    </div>
-    <div class="header__item">
-        <a class="link _black">Конфиденциальность</a>
-    </div>
-    <div class="header__spanned">
-        <div class="header__item">
-            <a class="link _black">
-                <i class="fa fa-bookmark"></i>
+    <div class="header__left flex-conainer">
+        <div class="flex-container__item header__item">
+            <a class="link _black" href="#">
+                <i class="fas fa-location-arrow link__icon"></i>
+                <span class="link__description">Москва</span>
             </a>
         </div>
-        <div class="header__item">
-            <a><i class="fa fa-bell"></i></a>
+        <div class="flex-container__item header__item">
+            <a class="link _black" href="#">
+                <span class="link__description">Конфиденциальность</span>
+            </a>
         </div>
-        <div class="header__item">
-            <a class="link _black">Настройка</a>
+    </div>
+    <div class="header__right flex-container">
+        <div class="flex-container__item header__item">
+            <a class="link _gray" href="#">
+                <i class="fa fa-bookmark link__icon"></i>
+            </a>
+        </div>
+        <div class="flex-container__item header__item">
+            <a href="#" class="link _gray">
+                <i class="fa fa-bell link__icon"></i>
+            </a>
+        </div>
+        <div class="flex-container__item header__item">
+            <a class="link _black">
+                <span class="link__description">Настройка</span>
+            </a>
         </div>
     </div>
 </header>
 
 <main class="container">
     <div class="container__content content">
-        <section class="content__news news">
-            <nav class="news__nav">
-                <a class="news__nav-item link">
-                    Сейчас в СМИ
-                </a>
-                <a class="news__nav-item link">
-                    Москва и область
-                </a>
-                <a class="news__nav-item link">
-                    Интересное
-                </a>
-                <a class="news__nav-item link link_orange link_small">
-                    Коронавирус
-                </a>
-            </nav>
 
-            <div class="news__datetime">18.10, 21:40</div>
+        <section class="content__news-ads news-ads">
+            <div class="news-ads__news news">
+                <nav class="news__nav">
+                    <a class="news__nav-item link _openned">
+                        Сейчас в СМИ
+                    </a>
+                    <a class="news__nav-item link _closed">
+                        Москва и область
+                    </a>
+                    <a class="news__nav-item link _closed">
+                        Интересное
+                    </a>
+                    <a class="news__nav-item link _orange _small">
+                        Коронавирус
+                    </a>
+                    <span class="news__datetime datetime">
+                        <span class="datetime__date">18.10,</span>
+                        <span class="datetime__time link _gray">21:40</span>
+                    </span>
+                </nav>
 
-            <ul class="news__list list">
-                <li class="list__item article">
-                <span class="article__preview">
-                    <a class="link _black">Lorem ipsum dolor sit amet consectetur</a>
-                </span>
-                </li>
-                <li class="list__item article">
-                <span class="article__preview">
-                    <a class="link _black">Lorem ipsum dolor, sit amet consectetur</a>
-                </span>
-                </li>
-                <li class="list__item article">
-                <span class="article__preview">
-                    <a class="link _black">Lorem ipsum dolor sit amet consectetur</a>
-                </span>
-                </li>
-                <li class="list__item article">
-                <span class="article__preview">
-                    <a class="link _black">Lorem ipsum dolor sit amet</a>
-                </span>
-                </li>
-                <li class="list__item article">
-                <span class="article__preview">
-                    <a class="link _black">Lorem ipsum dolor, sit</a>
-                </span>
-                </li>
-            </ul>
+                <ul class="news__list list">
+                    <li class="list__item article">
+                    <span class="article__preview">
+                        <a class="link _black">Lorem ipsum dolor sit amet consectetur</a>
+                    </span>
+                    </li>
+                    <li class="list__item article">
+                    <span class="article__preview">
+                        <a class="link _black">Lorem ipsum dolor, sit amet consectetur</a>
+                    </span>
+                    </li>
+                    <li class="list__item article">
+                    <span class="article__preview">
+                        <a class="link _black">Lorem ipsum dolor sit amet consectetur</a>
+                    </span>
+                    </li>
+                    <li class="list__item article">
+                    <span class="article__preview">
+                        <a class="link _black">Lorem ipsum dolor sit amet</a>
+                    </span>
+                    </li>
+                    <li class="list__item article">
+                    <span class="article__preview">
+                        <a class="link _black">Lorem ipsum dolor, sit</a>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="news-ads__ads ads-box">
+                <div class="ads-box__img">
+
+                </div>
+                <div class="ads-box__title link">
+                    Как писать на Python
+                </div>
+                <div class="ads-box__info">
+                    Углулённый курс на Яндекс.Практикуме
+                </div>
+            </div>
+
         </section>
 
         <div class="content__currencies currencies">

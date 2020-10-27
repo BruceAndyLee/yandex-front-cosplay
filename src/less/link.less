@@ -1,5 +1,10 @@
 .link {
+  text-decoration: none;
   color: rgb(0, 119, 255);
+
+  &__icon {
+    font-size: 1rem;
+  }
 
   &._black {
     color: black;
@@ -10,11 +15,20 @@
   }
 
   &._gray {
-    color: gray;
+    color: rgb(160, 160, 160);
   }
 
   &._small {
-    font-size: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &._openned {
+    color: rgb(0, 89, 190);
+  }
+
+  &._closed {
+    color: rgb(74, 159, 255);
   }
 
   &:hover {
