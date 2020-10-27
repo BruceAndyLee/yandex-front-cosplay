@@ -405,6 +405,10 @@ body {
   cursor: pointer;
 }
 
+.link:focus {
+  outline: solid 2px #ffdb0e;
+}
+
 .infocards-container {
   position: absolute;
   left: 81vw;
