@@ -24,4 +24,5 @@
 
 @ use `display: block;` in ::before pseudo-element (??)
 
-gulp plugin `sourcemap`: 
+@ font-weight/-size shouldn't be in styles but in mixins (font-bold-bigger, bold-big, regular-small)
+@ list styles and outline styles are to be reset in reset.less
