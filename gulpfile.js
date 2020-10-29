@@ -1,3 +1,4 @@
+const gulpSvgstore = require('gulp-svgstore');
 
 let project_folder = "dist"; // this is where the assembled project is going to be loaded
 let source_folder = "src";
@@ -12,22 +13,21 @@ let path = {
     },
     src: {
         html: [source_folder + "/*.html", "!_" + source_folder + "/*.html"],
-        css: source_folder + "/less/styles.less",
-        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico}",
+        css: source_folder + "/assets/styles/main.less",
+        img: source_folder + "/assets/img/**/*.{jpg,png,svg,gif,ico}",
         js: source_folder + "/js/script.js",
-        fonts: source_folder + "/fonts/*.ttf",
+        fonts: source_folder + "/assets/fonts/*.ttf",
     },
     watch: {
         html: source_folder + "/**/*.html",
-        css: source_folder + "/less/**/*.less",
+        css: source_folder + "/assets/styles/**/*.less",
         js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico}",
+        img: source_folder + "/assets/img/**/*.{jpg,png,svg,gif,ico}",
     },
     clean: "./" + project_folder + "/"
 }
 
-let { src, dest } = require('gulp'),
-    gulp = require('gulp'),
+let gulp = require('gulp'),
     browsersync = require("browser-sync").create(),
     fileinclude = require("gulp-file-include"),
     del = require("del"),
@@ -37,10 +37,15 @@ let { src, dest } = require('gulp'),
     autoprefixer = require("gulp-autoprefixer"),
     mediagroupper = require("gulp-group-css-media-queries"),
     csscleaner = require("gulp-clean-css"),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    svgmin = require("gulp-svgmin"),
+    svgstore = require("gulp-svgstore"),
+    inject = require("gulp-inject"),
+    ttf2woff = require("gulp-ttf2woff"),
+    ttf2woff2 = require("gulp-ttf2woff2");
 
-function browserSync() {
-    browsersync.init({ // takes in some plugin configurations
+function browserSync() {    
+    browsersync.init({
         server: {
             baseDir: "./" + project_folder + "/",
         },
@@ -50,14 +55,14 @@ function browserSync() {
 }
 
 function htmlWatcher() {
-    return src(path.src.html)
+    return gulp.src(path.src.html)
         .pipe(fileinclude())
-        .pipe(dest(path.build.html))
+        .pipe(gulp.dest(path.build.html))
         .pipe(browsersync.stream());
 }
 
 function cssWatcher() {
-    return src(path.src.css)
+    return gulp.src(path.src.css)
         .pipe(less())
         .pipe(concat('styles.css'))
         .pipe(mediagroupper())
@@ -67,17 +72,16 @@ function cssWatcher() {
                 cascade: true
             })
         )
-        .pipe(dest(path.build.css))
+        .pipe(gulp.dest(path.build.css))
         .pipe(csscleaner())
         .pipe(
             rename({
                 suffix: ".min"
             })
         )
-        .pipe(dest(path.build.css))
+        .pipe(gulp.dest(path.build.css))
         .pipe(browsersync.stream());
 }
-
 
 function watchFiles() {
     gulp.watch([path.watch.html], htmlWatcher);
@@ -88,9 +92,50 @@ function cleanDist() {
     return del(path.clean);
 }
 
-let build = gulp.series(cleanDist, gulp.parallel(cssWatcher, htmlWatcher));
+function fonts() {
+    gulp.src(path.src.fonts)
+        .pipe(ttf2woff())
+        .pipe(gulp.dest(path.build.fonts));
+
+    return gulp.src(path.src.fonts)
+        .pipe(ttf2woff2())
+        .pipe(gulp.dest(path.build.fonts));
+}
+
+function svgStore() {
+    const svgs = gulp
+        .src("./src/assets/img/**/*.svg")
+        .pipe(
+            svgmin(function () {
+                return {
+                    plugins: [
+                        {
+                            removeTitle: true,
+                        },
+                        {
+                            removeStyleElement: true,
+                        },
+                    ],
+                };
+            })
+        )
+        .pipe(rename({ prefix: "icon-" }))
+        .pipe(svgstore({ inlineSvg: true }));
+  
+    function fileContents(filePath, file) {
+        return file.contents.toString();
+    }
+  
+    return gulp
+        .src("./src/index.html")
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest("./src"));
+}
+
+let build = gulp.series(cleanDist, svgStore, gulp.parallel(cssWatcher, htmlWatcher));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.fonts = fonts;
 exports.css = cssWatcher;
 exports.html = htmlWatcher;
 exports.build = build;

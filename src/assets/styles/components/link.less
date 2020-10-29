@@ -1,0 +1,45 @@
+.link {
+  text-decoration: none;
+  color: @link-primary;
+  font-weight: 500;
+
+  &__icon {
+    font-size: 1rem;
+
+    &._sm {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &._secondary {
+    color: @link-secondary;
+  }
+  
+  &._accent {
+    color: @link-accent;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &._secondary-accent {
+    color: @link-secondary-accent;
+  }
+
+  &._select {
+    color: @link-primary-select;
+    font-weight: bold;
+  }
+
+  &._sm {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transition: color 0.3s ease-in-out;
+    color: @link-hover;
+    cursor: pointer;
+  }
+
+  .focus-outline();
+}
