@@ -31,7 +31,6 @@ let gulp = require('gulp'),
     browsersync = require("browser-sync").create(),
     fileinclude = require("gulp-file-include"),
     del = require("del"),
-    scss = require("gulp-sass"),
     concat = require("gulp-concat"),
     less = require("gulp-less"),
     autoprefixer = require("gulp-autoprefixer"),
@@ -40,9 +39,7 @@ let gulp = require('gulp'),
     rename = require("gulp-rename"),
     svgmin = require("gulp-svgmin"),
     svgstore = require("gulp-svgstore"),
-    inject = require("gulp-inject"),
-    ttf2woff = require("gulp-ttf2woff"),
-    ttf2woff2 = require("gulp-ttf2woff2");
+    inject = require("gulp-inject");
 
 function browserSync() {    
     browsersync.init({
@@ -93,12 +90,7 @@ function cleanDist() {
 }
 
 function fonts() {
-    gulp.src(path.src.fonts)
-        .pipe(ttf2woff())
-        .pipe(gulp.dest(path.build.fonts));
-
     return gulp.src(path.src.fonts)
-        .pipe(ttf2woff2())
         .pipe(gulp.dest(path.build.fonts));
 }
 

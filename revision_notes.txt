@@ -24,5 +24,12 @@
 
 @ use `display: block;` in ::before pseudo-element (??)
 
+@ all color are in color.less
 @ font-weight/-size shouldn't be in styles but in mixins (font-bold-bigger, bold-big, regular-small)
 @ list styles and outline styles are to be reset in reset.less
+
+@ news preview: use an image
+
+@ NEWS NAV and SEARCH item use 'less' with &
+
+@ give body 'main' class
