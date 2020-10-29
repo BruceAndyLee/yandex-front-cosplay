@@ -1,3 +1,27 @@
+@font-face {
+  font-family: YandexSans;
+  src: url('../../fonts/YandexSansDisplay-Regular.ttf.ttf') format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: YandexSans;
+  src: url('../../fonts/YandexSansDisplay-Regular.ttf.ttf') format("ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: YandexSans;
+  src: url('../../fonts/YandexSansDisplay-Regular.ttf.ttf') format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: YandexSans;
+  src: url('../../fonts/YandexSansDisplay-Regular.ttf.ttf') format("ttf");
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +37,39 @@ html {
 html,
 body {
   height: 100%;
+}
+
+.font-regular {
+  font-family: YandexSans;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.font-bold {
+  font-family: YandexSans;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.font-bold-medium {
+  font-family: YandexSans;
+  font-size: 13px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.font-regular-small {
+  font-family: YandexSans;
+  font-size: 13px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.font-regular-small {
+  font-family: YandexSans;
+  font-size: 13px;
+  font-weight: 500;
+  font-size: 11px;
 }
 
 .header {
@@ -483,7 +540,6 @@ body {
 .link__icon {
   width: 1rem;
   height: 1rem;
-  fill: black;
 }
 
 .link__icon._sm {
