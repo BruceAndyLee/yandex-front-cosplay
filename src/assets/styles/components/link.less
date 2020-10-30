@@ -1,7 +1,7 @@
 .link {
   text-decoration: none;
   color: @link-primary;
-  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 
   &__icon {
     width: 1rem;
@@ -33,11 +33,11 @@
   }
 
   &._sm {
-    font-size: 1rem;
+    .font-regular-small;
   }
 
   &:hover {
-    transition: color 0.3s ease-in-out;
+
     color: @link-hover;
     cursor: pointer;
   }

@@ -4,8 +4,9 @@
   align-items: center;
 
   &__description {
-    font-size: 0.8rem;
     display: block;
+    //font-size: 0.8rem;
+    .font-regular-small;
   }
   &__img {
     width: 44px;
@@ -13,10 +14,16 @@
     transition: all 0.3s ease-in-out;
     margin-bottom: 0.3rem;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
   &:hover > &__img {
     transform: translateY(-5px);
   }
+
   &:hover > &__description {
-    color: rgb(190, 1, 1);
+    color: @link-hover;
   }
 }

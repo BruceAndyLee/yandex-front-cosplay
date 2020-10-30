@@ -4,23 +4,22 @@
     align-items: flex-start;
     justify-items: center;
     height: 100%;
-    border: solid 5px grey;
     &:hover {
         cursor: pointer;
     }
 
     &__img {
-        background-color: greenyellow;
+        background-color: @news-ads-background;
         width: 80px;
         height: 80px;
         border-radius: 50%;
     }
 
     &__title {
-        font-size: 1.3rem;
+        //font-size: 1.3rem;
+        .font-bold-medium;
     }
 
     &__info {
-        font-size: 1rem;
     }
 }

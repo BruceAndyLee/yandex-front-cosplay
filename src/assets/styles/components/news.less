@@ -1,35 +1,28 @@
 .news {
-
-  
   &__nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     flex-wrap: nowrap;
-  }
-    
-  &__nav-item {
-    flex: 0 0 auto;  
-  }
 
-  &__nav-item {
-    font-size: 1.2rem;
-    font-weight: 550;
-  }
-
-  &__nav-item + &__nav-item {
-    padding-left: 1rem;
+    &-item {
+      //font-size: 1.2rem;
+      //font-weight: 550;
+      .font-bold-medium;
+    }
+    &-item + &-item {
+      padding-left: 1rem;
+    }
   }
     
   &__datetime {
-    color: lightslategray;
-    font-size: 0.8rem;
+    color: @grayed-text;
     margin-left: 1rem;
+    //font-size: 0.8rem;
+    .font-regular-small;
   }
     
   &__preview {
-    font-size: 0.5rem;
     position: relative;
   }
-
 }
