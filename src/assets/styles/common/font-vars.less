@@ -1,0 +1,34 @@
+@font-family: YandexSans;
+@font-smaller-size: 11px;
+@font-small-size: 12px;
+@font-normal-size: 13px;
+@font-medium-size: 16px;
+@font-big-size: 20px;
+@font-large-size: 30px;
+
+@font-regular-weight: 500;
+@font-bold-weight: 600;
+@font-bolder-weight: 700;
+
+.font-regular {
+  .font(YandexSans, @font-normal-size, @font-regular-weight)
+}
+
+.font-bold {
+  .font(YandexSans, @font-normal-size, @font-bold-weight)
+}
+
+.font-bold-medium {
+  .font-bold;
+  font-size: @font-medium-size;
+}
+
+.font-regular-small {
+  .font-regular;
+  font-size: @font-small-size;
+}
+
+.font-regular-small {
+  .font-regular;
+  font-size: @font-smaller-size;
+}
