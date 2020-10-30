@@ -80,6 +80,10 @@ body {
 
 .news-ads__ads {
   margin-left: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .ads-box {
@@ -95,6 +99,11 @@ body {
           align-items: flex-start;
   justify-items: center;
   height: 100%;
+  border: solid 5px grey;
+}
+
+.ads-box:hover {
+  cursor: pointer;
 }
 
 .ads-box__img {
