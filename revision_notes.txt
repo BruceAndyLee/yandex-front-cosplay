@@ -11,14 +11,8 @@
 
 @ info-cards
 
-@ icons to be loaded via inline-svg using svg-store
-
-@ inline styles are forbidden
-
 
 @ no text should be left without a span
-
-@ header has two blocks for left and right alignment
 
 
 
@@ -29,7 +23,5 @@
 @ list styles and outline styles are to be reset in reset.less
 
 @ news preview: use an image
-
-@ NEWS NAV and SEARCH item use 'less' with &
 
 @ give body 'main' class

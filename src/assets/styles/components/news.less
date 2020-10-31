@@ -6,19 +6,16 @@
     flex-direction: row;
     align-items: flex-end;
     flex-wrap: nowrap;
-  }
     
-  &__nav-item {
-    flex: 0 0 auto;  
-  }
+    &-item {
+      flex: 0 0 auto;  
+      font-size: 1.2rem;
+      font-weight: 550;
+    }
 
-  &__nav-item {
-    font-size: 1.2rem;
-    font-weight: 550;
-  }
-
-  &__nav-item + &__nav-item {
-    padding-left: 1rem;
+    &-item + &-item {
+      padding-left: 1rem;
+    }
   }
     
   &__datetime {
