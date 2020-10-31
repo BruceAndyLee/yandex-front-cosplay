@@ -4,17 +4,20 @@
   &__item + &__item {
     margin-left: 0.4rem;
   }
+
+  &__item:nth-child(3n) {
+    margin-left: 0.4rem;
+  }
   
   &__item {
     &._name {
-      font-weight: bold;
+      .font-bold;
     }
     &._number {
       
     }
     &._dynamics {
-      font-weight: 300;
-      color: dimgray;
+      color: @grayed-text;
     }
   }
 }

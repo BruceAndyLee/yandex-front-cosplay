@@ -6,10 +6,10 @@ let source_folder = "src";
 let path = {
     build: {
         html: project_folder + "/",
-        css: project_folder + "/css/",
+        css: project_folder + "/assets/css/",
         js: project_folder + "/js/",
-        img: project_folder + "/img/",
-        fonts: project_folder + "/fonts/",
+        img: project_folder + "/assets/img/",
+        fonts: project_folder + "/assets/fonts/",
     },
     src: {
         html: [source_folder + "/*.html", "!_" + source_folder + "/*.html"],
@@ -124,7 +124,7 @@ function svgStore() {
         .pipe(gulp.dest("./src"));
 }
 
-let build = gulp.series(cleanDist, svgStore, gulp.parallel(cssWatcher, htmlWatcher));
+let build = gulp.series(cleanDist, svgStore, fonts, gulp.parallel(cssWatcher, htmlWatcher));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
