@@ -14,7 +14,7 @@ let path = {
     src: {
         html: [source_folder + "/*.html", "!_" + source_folder + "/*.html"],
         css: source_folder + "/assets/styles/main.less",
-        img: source_folder + "/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        img: source_folder + "/assets/img/**/*.{jpg,jpeg,png,svg,gif,ico}",
         js: source_folder + "/js/script.js",
         fonts: source_folder + "/assets/fonts/*.ttf",
     },
@@ -89,6 +89,11 @@ function cleanDist() {
     return del(path.clean);
 }
 
+function imgs() {
+    return gulp.src(path.src.img)
+        .pipe(gulp.dest(path.build.img));
+}
+
 function fonts() {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
@@ -124,7 +129,11 @@ function svgStore() {
         .pipe(gulp.dest("./src"));
 }
 
-let build = gulp.series(cleanDist, svgStore, fonts, gulp.parallel(cssWatcher, htmlWatcher));
+let build = gulp.series(cleanDist, 
+                        svgStore, 
+                        imgs, 
+                        fonts, 
+                        gulp.parallel(cssWatcher, htmlWatcher));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;

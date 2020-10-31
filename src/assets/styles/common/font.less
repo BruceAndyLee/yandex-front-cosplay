@@ -1,15 +1,15 @@
-.font-face(@font-family, @file-name, @font-weight) {
+.font-face(@font-family, @file-name) {
     @font-face {
         font-family: @font-family;
-        src: url('../fonts/@{file-name}.ttf') format("ttf");
-        font-weight: @font-weight;
+        src: url('../fonts/@{file-name}.ttf') format("opentype");
+            //  url('../fonts/YandexSansDisplay-Regular.ttf') format("opentype");
     }
 }
 
-.font-face('YandexSans', 'YandexSansDisplay-Regular', 400);
-.font-face('YandexSans', 'YandexSansDisplay-Regular', 500);
-.font-face('YandexSans', 'YandexSansDisplay-Regular', 600);
-.font-face('YandexSans', 'YandexSansDisplay-Regular', 700);
+// .font-face('YandexSans', 'YandexSansText-Regular', 500);
+// .font-face('YandexSans', 'YandexSansText-Medium', 700);
+.font-face('YandexSans', 'YandexSansText-Regular');
+.font-face('YandexSansBold', 'YandexSansText-Medium');
 
 .font(@font-family, @font-size, @font-weight) {
     font-family: @font-family;

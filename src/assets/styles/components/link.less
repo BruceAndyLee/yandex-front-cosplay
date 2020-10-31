@@ -4,12 +4,18 @@
   transition: color 0.3s ease-in-out;
 
   &__icon {
-    width: 1rem;
-    height: 1rem;
+    margin-right: 5px;
+    width: @font-normal-size;
+    height: @font-normal-size;
 
     &._sm {
-      width: 1rem;
-      height: 1rem;
+      width: @font-small-size;
+      height: @font-small-size;
+    }
+
+    &._xl {
+      width: @font-medium-size;
+      height: @font-medium-size;
     }
   }
 
@@ -19,8 +25,7 @@
   
   &._accent {
     color: @link-accent;
-    font-size: 1.1rem;
-    font-weight: 500;
+    .font-regular;
   }
 
   &._secondary-accent {
@@ -29,7 +34,6 @@
 
   &._select {
     color: @link-primary-select;
-    font-weight: bold;
   }
 
   &._sm {

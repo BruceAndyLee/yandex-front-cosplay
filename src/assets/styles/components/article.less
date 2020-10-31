@@ -1,11 +1,16 @@
 .article {
+  display: flex;
+  align-items: flex-end;
+
   &__preview {
-    font-size: 1rem;
   }
 
   &__preview::before {
-    content: '@';
-    font-size: 1rem;
+    content: '';
+    background-image: url('../img/news-icon.jpeg');
+    background-size: cover;
+    width: 13px;
+    height: 13px;
     position: absolute;
     left: -1.5rem;
   }
