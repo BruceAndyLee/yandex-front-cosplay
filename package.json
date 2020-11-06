@@ -34,6 +34,8 @@
     "gulp-svgstore": "^7.0.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.13"
+    "browser-sync": "^2.26.13",
+    "node-fetch": "^2.6.1",
+    "node-prompt": "^0.2.2"
   }
 }
