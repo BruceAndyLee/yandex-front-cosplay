@@ -1,10 +1,9 @@
 {
   "name": "yandex-front-cosplay",
   "version": "1.0.0",
-  "description": "using gulp for the first time",
+  "description": "NetCracker's course, html/less/js projects",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
     "start:dev": "gulp",
     "build": "gulp build"
