@@ -24,4 +24,6 @@
 
 @ news preview: use an image
 
-@ give body 'main' class
+@ google and copy&paste normalize.less
+@ use braces on mixins
+@ put ::befores in accordance with less styling

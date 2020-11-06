@@ -1,0 +1,25 @@
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__name > .link {
+    &::first-letter {
+      color: red;
+    }
+  }
+
+  &__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: solid 2px orange;
+    background-image: url("../img/avatar-34.jpg");
+    background-size: cover;
+
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
