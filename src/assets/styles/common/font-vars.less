@@ -2,14 +2,20 @@
 @font-smaller-size: 11px;
 @font-small-size: 12px;
 @font-normal-size: 13px;
-@font-medium-size: 16px;
-@font-big-size: 20px;
+@font-medium-size: 14px;
+@font-medium-big-size: 16px;
+@font-big-size: 18px;
 @font-bigger-size: 25px;
 @font-large-size: 30px;
 
+@font-light-weight: 400;
 @font-regular-weight: 500;
 @font-bold-weight: 500;
 @font-bolder-weight: 600;
+
+.font-light {
+  .font('YandexSans', @font-normal-size, @font-regular-weight);
+}
 
 .font-regular {
   .font('YandexSans', @font-normal-size, @font-regular-weight);
@@ -22,6 +28,16 @@
 .font-bold-medium {
   .font-bold;
   font-size: @font-medium-size;
+}
+
+.font-bold-big {
+  .font-bold;
+  font-size: @font-big-size;
+}
+
+.font-regular-medium-big {
+  .font-regular;
+  font-size: @font-medium-big-size;
 }
 
 .font-regular-big {

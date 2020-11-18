@@ -2,22 +2,24 @@
   display: flex;
 
   &__item + &__item {
-    margin-left: 0.4rem;
+    margin-left: 10px;
   }
 
   &__item:nth-child(3n) {
-    margin-left: 0.4rem;
+    margin-right: 9px;
   }
   
   &__item {
+    
     &._name {
-      .font-bold;
     }
+
     &._number {
-      
     }
+
     &._dynamics {
       color: @grayed-text;
     }
+
   }
 }

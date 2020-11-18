@@ -1,23 +1,31 @@
 .urban {
-    position: relative;
-    width: 700px;
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
+  position: relative;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  white-space: normal;
   
   &__item {
 
     &-header {
-      .font-bold-medium;
+      .font-regular-big;
+
+      & .link {
+        &:nth-child(2) {
+          .font-regular-medium;
+          margin-left: 9px;
+        }
+      }
     }
 
     &-content {
-      
+      margin-top: 1px;
     }
-  }
 
-  &__item + &__item {
-    margin-left: 1rem;
+    &:nth-child(2) {
+      // transform: translateX(-35px);
+    }
   }
 
 }
