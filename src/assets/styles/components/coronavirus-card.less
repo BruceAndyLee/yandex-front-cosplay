@@ -1,0 +1,44 @@
+.coronavirus-card {
+
+    position: relative;
+
+    &__header {
+        padding: 15px;
+    }
+
+    &__body {
+        padding-left: 15px;
+    }
+
+    &__footer {
+        padding-top: 22px;
+        padding-left: 16px;
+        padding-bottom: 12px;
+        display: flex;
+        align-content: center;
+
+        &-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 7px;
+            position: relative;
+            top: -2px;
+        }
+
+        &-text {
+            color: @grayed-text;
+        }
+    }
+
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+
+    &:hover {
+        transform: translateX(-20px);
+        
+        & + .rug-card {
+            opacity: 1;
+        }
+    }
+
+}

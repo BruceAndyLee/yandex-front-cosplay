@@ -1,15 +1,20 @@
 .infocards {
     position: absolute;
-    left: 1715px;
-    top: 10px;
+    left: 1686px;
+    top: -24px;
     width: calc(1980px - 1715px);
 
     &__card {
+        border-radius: 3px;
         width: 220px;
-        box-shadow: 0 0 5px @gray-shadow;
-    }
+        box-shadow: 0 0 5px lighten(@gray-shadow, 35%);
 
-    &__card + &__card {
-        margin-top: 10px;
+        & + & {
+            margin-top: 10px;
+        }
+
+        &:nth-child(3) {
+            box-shadow: none;
+        }
     }
 }

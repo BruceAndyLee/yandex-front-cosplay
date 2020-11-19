@@ -101,7 +101,7 @@ function fonts() {
 
 function svgStore() {
     const svgs = gulp
-        .src("./src/assets/img/**/*.svg")
+        .src("./src/assets/img/*.svg")
         .pipe(
             svgmin(function () {
                 return {
@@ -120,6 +120,7 @@ function svgStore() {
         .pipe(svgstore({ inlineSvg: true }));
   
     function fileContents(filePath, file) {
+        console.log('scgStore: processing ' + filePath);
         return file.contents.toString();
     }
   
@@ -129,10 +130,10 @@ function svgStore() {
         .pipe(gulp.dest("./src"));
 }
 
-let build = gulp.series(cleanDist, 
-                        svgStore, 
-                        imgs, 
-                        fonts, 
+let build = gulp.series(cleanDist,
+                        imgs,
+                        svgStore,
+                        fonts,
                         gulp.parallel(cssWatcher, htmlWatcher));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 

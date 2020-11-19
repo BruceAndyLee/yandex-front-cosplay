@@ -11,17 +11,34 @@
     }
 
     &__voice-search {
-        fill: black;
+        fill: @grayed-text;
         width: 24px;
         height: 24px;
-        color: black;
+        transition: color 0.3s ease-in-out;
+
+        position: relative;
+        top: 7px;
+        left: -78px;
+
+        &:hover {
+            fill: darken(@grayed-text, 15%);
+        }
     }
 
     &__keyboard {
-        fill: black;
+        color: @grayed-text;
         width: 24px;
         height: 24px;
-        color: black;
+        transform: scaleY(0.7) scaleX(1.15);
+        transition: color 0.3s ease-in-out;
+
+        position: relative;
+        top: 7px;
+        left: -72px;
+
+        &:hover {
+            color: darken(@grayed-text, 15%);
+        }
     }
 
     &__submit {
@@ -30,9 +47,10 @@
         background-color: @yandex-yellow;
         border: solid 2px @yandex-yellow;
         padding: 6px 12px 7px;
-        margin-left: -3px;
-        transform: translateY(-1px);
         transition: all 0.3s ease-in-out;
+        position: relative;
+        left: -56px;
+        top: -1px;
 
         &:hover {
             background-color: @yandex-yellow-darker;
